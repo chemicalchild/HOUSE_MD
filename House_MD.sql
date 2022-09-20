@@ -1,3 +1,5 @@
+--joining house_imdb & house_episode, ordering by rating limiting result to the first 10 rows 
+--to get top shows by rating 
 SELECT 
     hi.season,
     episode_num,
@@ -17,6 +19,8 @@ ORDER BY imdb_rating DESC
 LIMIT 10;
 
 
+-- to get top shows by total votes
+-- join the filels and order by total votes descending 
 SELECT 
     hi.season,
     episode_num,
@@ -36,6 +40,7 @@ ORDER BY total_votes DESC
 LIMIT 10;
 
 
+-- to get top shows by US views
 SELECT 
     hi.season,
     episode_num,
@@ -54,7 +59,7 @@ FROM
 ORDER BY us_viewers DESC
 LIMIT 10;
 
-
+-- to order the episodes by directors, join both fles on episode number and season.
 SELECT 
     hi.season,
     episode_num,
